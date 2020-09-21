@@ -1,3 +1,9 @@
 export default function collectCarNumberCount(collection) {
-  // TODO 7: 在这里写实现代码
+  let count = 0;
+  collection.forEach(element => {
+    if (element[0] === '粤' && element[1] === 'A') {
+      count += 1;
+    }
+  });
+  return count;
 }
