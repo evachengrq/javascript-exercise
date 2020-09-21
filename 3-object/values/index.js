@@ -1,3 +1,5 @@
 export default function countTypesNumber(source) {
-  // TODO 6: 在这里写实现代码
+  const array = Object.values(source);
+  // ['3', '4', '5']
+  return array.map(char => parseInt(char, 10)).reduce((prev, current) => prev + current, 0);
 }
