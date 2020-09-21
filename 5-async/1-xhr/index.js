@@ -5,7 +5,7 @@ function fetchData(url, successCallback, errorCallback) {
   xhr.open('GET', url);
   xhr.onreadystatechange = () => {
     if (xhr.readyState === 4) {
-      if (xhr.status < 400 && xhr.status >= 200) {
+      if (xhr.status === 200) {
         successCallback(xhr.responseText);
       } else {
         errorCallback(xhr.statusText);
